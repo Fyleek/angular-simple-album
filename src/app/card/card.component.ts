@@ -4,6 +4,7 @@ class Post {
   title!: string;
   description!: string;
   picture!: string;
+  like!: number;
 } 
 
 @Component({
@@ -15,9 +16,14 @@ export class CardComponent implements OnInit {
 
   @Input() post!: Post;
 
+  addLike(){
+    this.post.like++;
+  };
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
