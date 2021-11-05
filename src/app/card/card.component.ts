@@ -13,11 +13,12 @@ class Post {
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-
+  hearthComplete = false;
   @Input() post!: Post;
 
   addLike(){
     this.post.like++;
+    this.hearthComplete = true;
   };
 
   constructor() { }
