@@ -7,5 +7,6 @@
       <i class="far fa-heart" (click)="addLike()" *ngIf="!hearthComplete"></i>
       <i class="fa fa-heart" (click)="addLike()" *ngIf="hearthComplete"></i>
     </p>
+    <a [routerLink]="['/details', post.id]">En savoir plus</a>
   </div>
 </article>

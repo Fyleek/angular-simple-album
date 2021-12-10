@@ -1,11 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-class Post {
-  title!: string;
-  description!: string;
-  picture!: string;
-  like!: number;
-} 
+import { Post } from '../types';
 
 @Component({
   selector: 'app-card',
@@ -17,6 +11,7 @@ export class CardComponent implements OnInit {
   @Input() post!: Post;
 
   addLike(){
+    if(!this.post.like) this.post.like = 0;
     this.post.like++;
     this.hearthComplete = true;
   };
